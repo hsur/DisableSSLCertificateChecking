@@ -27,12 +27,12 @@ public class App {
 
 	// ***For development use only (This code contains some security issues) ***
 	public static void disableSSLCertificateChecking() throws Exception {
-		System.out.println("[WARN] *** Disable SSLCertificate Checking ***");
+		System.out.println("[WARN] *** SSLCertificate Checking DISABLED ***");
 
 		// ホスト名の検証を行わない
 		HostnameVerifier hv = new HostnameVerifier() {
 			public boolean verify(String s, SSLSession ses) {
-				System.out.println("[WARN] Hostname is not matched.");
+				System.out.println("[WARN] *** HostnameVerifier DISABLED *** ");
 				return true;
 			}
 		};
